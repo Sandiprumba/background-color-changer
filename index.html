@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Changer</title>
+    <style>
+      body {
+        padding: 20px 100px;
+        margin: 0px;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 20px;
+        text-align: justify;
+      }
+      .btn {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        border: solid gray 2px;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      #white {
+        background-color: white;
+      }
+      #aqua {
+        background-color: aquamarine;
+      }
+      #violet {
+        background-color: #ce9aff;
+      }
+      #black {
+        background-color: black;
+      }
+      #color-switcher {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="color-switcher">
+      <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+      <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+      <span class="btn" id="violet" onclick="changeBG('#ce9aff')"></span>
+      <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About us</h1>
+    <img
+      src="https://media.istockphoto.com/id/184954065/photo/sunset-sunrise-panaromic-big-file.webp?b=1&s=170667a&w=0&k=20&c=4rucm0wMUsXtc0yWNj6AoFVsTCwU9ZLuSns1ov1l2mo="
+      alt=""
+    />
+    <p class="text">
+      Nepali culture, deeply rooted in the Himalayas, is a vibrant tapestry of
+      traditions, where religion and festivals hold profound importance. With
+      Hinduism and Buddhism as its pillars, Nepal celebrates a plethora of
+      colorful festivals, uniting its people in devotion and merriment. The
+      country's architectural gems, such as pagoda-style temples and stupas,
+      reflect the intricate craftsmanship of its Newar artisans. The Nepali
+      language connects its diverse population, while traditional attire, music,
+      dance, and cuisine reveal the country's rich ethnic diversity. Family
+      bonds are strong, and hospitality is paramount, exemplifying the warmth
+      and openness of Nepali society. In addition to its cultural riches,
+      Nepal's breathtaking mountain landscapes attract adventurers and trekkers
+      from around the world, making it a unique cultural hub set against the
+      backdrop of awe-inspiring natural beauty.
+    </p>
+    <script>
+      function changeBG(color) {
+        document.body.style.backgroundColor = color;
+        let txt = document.getElementsByClassName("text");
+        if (color == "#000000") {
+          //for of loop in order to loop through the elements of array
+          for (let elm of txt) {
+            elm.style.color = "white";
+          }
+        } else {
+          for (let elm of txt) {
+            elm.style.color = "black";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
